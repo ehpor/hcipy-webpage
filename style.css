@@ -1,0 +1,82 @@
+/*
+    Define custom colors:
+    https://stackoverflow.com/a/17595596/498873
+*/
+:root {
+    --hcipy-primary: #455265;/*#27ae60;*/
+    --hcipy-secondary: #2c3645;
+    --hcipy-tertiary: #1e2530;
+	--hcipy-accent: #2980b9;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 255);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: rgba(255, 255, 255, .7);
+}
+
+.bg-dark {
+    background-color: var(--hcipy-secondary) !important;
+    color: white;
+}
+
+body {
+    color: var(--hcipy-tertiary);
+    font-family: 'Noto Sans', sans-serif;
+}
+
+main {
+    padding-top: 7rem;
+    margin-bottom: 0;
+}
+
+a {
+    color: var(--hcipy-accent);
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+footer {
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.opener {
+    padding-bottom: 3rem;
+}
+
+#gp-banner {
+    padding-bottom: 3rem;
+    width: 500px;
+    max-width: 100%;
+}
+
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.btn-outline-primary {
+    background-color: white;
+    border-color: var(--hcipy-accent);
+    color: var(--hcipy-accent);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:active,
+.btn-outline-primary:focus {
+    background-color: var(--hcipy-accent);
+    border-color: var(--hcipy-accent);
+    color: white;
+}
