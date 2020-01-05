@@ -42,6 +42,7 @@ a {
 
 h2 {
     font-size: 1.5rem;
+    padding-top: 8px;
 }
 
 footer {
@@ -53,10 +54,10 @@ footer {
     padding-bottom: 3rem;
 }
 
-#gp-banner {
+#banner {
     padding-bottom: 3rem;
-    width: 500px;
-    max-width: 100%;
+    padding-top: 3rem;
+    width: 100%;
 }
 
 .centered {
@@ -79,4 +80,11 @@ footer {
     background-color: var(--hcipy-accent);
     border-color: var(--hcipy-accent);
     color: white;
+}
+
+blockquote {
+	border-left: 4px solid var(--hcipy-accent);
+	padding-left: 16px;
+	margin-left: 0;
+	font-style: italic;
 }
