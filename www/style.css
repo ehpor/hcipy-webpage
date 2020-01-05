@@ -42,6 +42,7 @@ a {
 
 h2 {
     font-size: 1.5rem;
+    padding-top: 8px;
 }
 
 footer {
@@ -55,8 +56,8 @@ footer {
 
 #gp-banner {
     padding-bottom: 3rem;
-    width: 500px;
-    max-width: 100%;
+    padding-top: 3rem;
+    width: 100%;
 }
 
 .centered {
