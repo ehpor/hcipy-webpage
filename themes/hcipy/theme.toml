@@ -1,0 +1,4 @@
+name = "HCIPy"
+license = "MIT"
+licenselink = "https://github.com/ehpor/hcipy-webpage/blob/main/LICENSE"
+description = "Theme for the HCIPy project website"

@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#2c3645">
+    <meta name="theme-color" content="#1e2530">
     <title>HCIPy</title>
-    <link rel="preload" href="fonts/NotoSans.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="style.css" media="screen">
+    <link rel="preload" href="{{ "fonts/NotoSans.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}" media="screen">
 </head>
-
 <body>
 
 <nav class="navbar">
-    <a class="navbar-brand" href=".">HCIPy</a>
+    <a class="navbar-brand" href="{{ if .Site.Params.docsSite }}https://hcipy.org{{ else }}{{ "" | relURL }}{{ end }}">HCIPy</a>
     <input type="checkbox" id="nav-toggle" class="nav-toggle">
     <label for="nav-toggle" class="nav-toggle-label">
         <svg viewBox="0 0 30 30" width="24" height="24">
@@ -28,29 +26,22 @@
                 </svg>
             </a>
         </li>
+        {{ if not .Site.Params.docsSite }}
+        <li><a href="{{ "news" | relURL }}">News</a></li>
+        <li><a href="{{ "about" | relURL }}">About</a></li>
+        <li><a href="{{ "team" | relURL }}">Team</a></li>
+        <li><a href="https://docs.hcipy.org/">Documentation</a></li>
+        {{ end }}
     </ul>
 </nav>
 
 <main>
-
-    <div class="container">
-        <h1>Oops, something went wrong...</h1>
-
-        <p>
-            Here is a link to the <a href="https://hcipy.org">homepage</a> or the <a href="https://docs.hcipy.org/stable">latest stable documentation</a>.
-        </p>
-
-        <p>
-            If you believe there is a problem with this website, please let us know on <a href="https://github.com/ehpor/hcipy">Github</a>.
-        </p>
-        
-    </div>
-
+{{ block "main" . }}{{ end }}
 </main>
 
 <footer class="container">
     <hr>
-    <p>&copy; HCIPy</p>
+    <p>&copy; HCIPy project</p>
 </footer>
 
 </body>
