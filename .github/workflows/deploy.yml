@@ -1,0 +1,29 @@
+name: Deploy to S3
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "0.163.3"
+
+      - run: hugo -s www
+      - run: hugo -s docs
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: us-east-2
+
+      - run: aws s3 sync --acl public-read --delete --cache-control max-age=604800,public www/public/ s3://hcipy.org
+      - run: aws s3 sync --acl public-read --delete --cache-control max-age=604800,public docs/public/ s3://docs.hcipy.org

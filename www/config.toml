@@ -1,0 +1,11 @@
+baseURL = "/"
+theme = "hcipy"
+title = "HCIPy"
+themesDir = "../themes"
+publishDir = "public"
+disableKinds = ["RSS", "sitemap", "taxonomy", "term"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

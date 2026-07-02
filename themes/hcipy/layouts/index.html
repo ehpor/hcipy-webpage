@@ -1,0 +1,9 @@
+{{ define "main" }}
+    <div class="opener container" align="center">
+        {{ with resources.Get "img/hcipy_banner.jpg" }}
+            {{ $resized := .Resize "1110x q85" }}
+            <img src="{{ $resized.RelPermalink }}" alt="HCIPy banner" id="banner" draggable="false"/>
+        {{ end }}
+        {{ .Content }}
+    </div>
+{{ end }}
