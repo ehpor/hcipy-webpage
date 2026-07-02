@@ -23,7 +23,7 @@ jobs:
       - uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
-          aws-region: us-east-1
+          aws-region: us-east-2
 
       - run: aws s3 sync --acl public-read --delete --cache-control max-age=604800,public www/public/ s3://hcipy.org
       - run: aws s3 sync --acl public-read --delete --cache-control max-age=604800,public docs/public/ s3://docs.hcipy.org
