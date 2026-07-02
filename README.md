@@ -27,5 +27,4 @@ Pushes to `master` are automatically built and deployed via GitHub Actions:
 
 ### Required GitHub Secrets
 
-- `AWS_ACCESS_KEY_ID`
-- `AWS_SECRET_ACCESS_KEY`
+- `AWS_ROLE_ARN` — IAM role ARN with a trust policy for GitHub OIDC (`token.actions.githubusercontent.com`) and permissions to `s3:PutObject`, `s3:DeleteObject` on the two buckets
