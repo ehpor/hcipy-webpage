@@ -4,6 +4,7 @@ title: "Releases"
 
 The HCIPy documentation and changelog for the last HCIPy releases is available here:
 
+- *Sep 2, 2026* &mdash; HCIPy **0.7.1** ([documentation](https://docs.hcipy.org/0.7.1/), [changelog](https://docs.hcipy.org/0.7.1/changelog.html))
 - *Aug 25, 2025* &mdash; HCIPy **0.7.0** ([documentation](https://docs.hcipy.org/0.7.0/), [changelog](https://docs.hcipy.org/0.7.0/changelog.html))
 - *Mar 15, 2024* &mdash; HCIPy **0.6.0** ([documentation](https://docs.hcipy.org/0.6.0/), [changelog](https://docs.hcipy.org/0.6.0/changelog.html))
 - *Oct 17, 2022* &mdash; HCIPy **0.5.1** ([documentation](https://docs.hcipy.org/0.5.1/), [changelog](https://docs.hcipy.org/0.5.1/changelog.html))
